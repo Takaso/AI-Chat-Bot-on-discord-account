@@ -9,3 +9,17 @@ This code will run an AI chat bot to reply for you on your discord account, it f
 }
 ```
 In the `token` option you'll put your discord token, in `api` there'll be your https://console.groq.com/keys API key, lastly if `prefix` is empty it will reply to every messages, but if add a prefix it reply only with the messages starting with the prefix defined
+# Other settings
+Inside the code you can specify your prompt here:
+```py
+starting_prompt:str = """
+These are the previous messages so you can have context, if it's '(No messages yet)', ignore, the messages with '(You)' as sender, were sent by you previously:
+Note: if a message if empty, it was media content that you cannot visualize
+    
+%s
+Now provide a reply to this message, send only your reply as a response:
+%s: %s
+
+You will have the personality of [Here you can describe anything you wish for] plus don't sound self repeating
+""";
+```
