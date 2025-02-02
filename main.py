@@ -61,7 +61,7 @@ def messagelogger():
                 final_prompt:str = starting_prompt % ("".join([i+"\n" for i in memory_channels[chan_id]] if not memory_channels[chan_id]==[] else "(No messages yet)"), username, _input);
                 print(final_prompt, end="\n===========================\n");
                 requests.post(f"https://discord.com/api/v9/channels/{chan_id}/typing", headers={
-                    "Authorization": "Bot "+token
+                    "Authorization": token
                 });
                 AI_response = requests.post("https://api.groq.com/openai/v1/chat/completions", headers={
                     "Content-Type": "application/json",
@@ -78,7 +78,7 @@ def messagelogger():
                 AI_reply:str = AI_response.json()['choices'][0]['message']['content'];
                 # You can add a time.sleep here to make it type longer
                 requests.post(f"https://discord.com/api/v9/channels/{chan_id}/messages", headers={
-                    "Authorization": "Bot "+token
+                    "Authorization": token
                 }, json={
                     "content": AI_reply,
                     "message_reference": {
