@@ -1,5 +1,7 @@
 {
     "token": "",
     "api": "",
-    "prefix": ""
+    "prefix": "",
+    "chan_id": "",
+    "typing": "yes"
 }
