@@ -3,5 +3,8 @@
     "api": "",
     "prefix": "",
     "chan_id": "",
-    "typing": "yes"
+    "typing": "",
+    "waiting_time": "yes",
+    "limit": 70,
+    "reading_speed": 3
 }
