@@ -14,7 +14,7 @@ This code will run an AI chat bot to reply for you on your discord account, it f
 }
 ```
 - In the `token` option you'll put your discord token, you can fetch with the dev tools
-- in `api` there'll be your https://console.groq.com/keys API key`
+- in `api` there'll be your https://console.groq.com/keys API key
 - If `prefix` is empty it will reply to every messages, but if add a prefix it reply only with the messages starting with the prefix defined, example: "`!hello`" with `!` as prefix
 - You can restrict the channel the AI texts in by inserting the channel ID in `chan_id`, for DMs you have to find the DM ID
 - If you don't want the AI to wait a few seconds to simulate user typing leave `typing` empty, but it's not really necessary
